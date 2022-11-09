@@ -1,0 +1,251 @@
+:root   {
+    --color-bg: rgb(34, 26, 32);
+    --color-dark-gray: rgb(31, 31, 31);
+    --color-white: rgb(236, 229, 236);
+    --color-pink: rgb(180, 61, 106);
+    --color-blue: rgb(41, 80, 139);
+    --color-green: rgb(15, 151, 15);
+    --color-red: rgb(170, 22, 22);
+}
+
+body    {
+    margin: 0;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    background-color: var(--color-bg);
+}
+
+/* SECTIONS */
+.main   {
+    width: 75%;
+    min-height: 80vh;
+    display: flex;
+    border: 2px solid var(--color-pink);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px var(--color-pink);
+}
+
+.left   {
+    height: 100%;
+    width: 600px;
+    background: url(./images/cheng-feng-bg.jpg);
+    background-size: cover;
+}
+
+.right   {
+    background-color: var(--color-dark-gray);
+    height: 80vh;
+    width: max(60vw, 600px);
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.top    {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap:  30px;
+   flex-grow: 1;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    flex-grow: 1;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-transform: uppercase;
+}
+
+/* ELEMENTS */
+
+.formulaire    {
+    width: 90%;
+}
+
+form    {
+    width: 500px;
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+    column-gap: 100px;
+}
+
+p   {
+    margin: 0;
+    width: 90%;
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-white);
+}
+
+form > p    {
+    width: 100%;
+}
+
+.input  {
+    color: var(--color-white);
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+}
+
+label   {
+    padding-left: 8px;
+    color: var(--color-white);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+input   {
+    width: 225px;
+    height: 30px;
+    border-radius: 1rem;
+    border: solid 4px black;
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+input:hover {
+    border-color: var(--color-blue);
+}
+
+input:focus {
+    border-color: var(--color-blue);
+}
+
+input:not(:placeholder-shown):valid {
+    border-color: var(--color-green);
+}
+
+input:not(:placeholder-shown):invalid   {
+    border-color: var(--color-red);
+}
+
+em  {
+    color: var(--color-pink);
+}
+
+button  {
+    width: 540px;
+    height: 50px;
+    border-color: var(--color-bg);
+    border-radius: 1rem;
+    color: var(--color-white);
+    background-color: var(--color-pink);
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 10px var(--color-pink);
+}
+
+button:hover    {
+    transition: linear .3s;
+    background-color: var(--color-white);
+    color: var(--color-pink);
+}
+
+button:not(:hover)  {
+    transition: linear .3s;
+}
+
+.login  {
+    color: var(--color-white);
+    font-size: 14px;
+}
+
+a   {
+    color: var(--color-pink);
+}
+
+a:hover {
+    transition: linear .3s;
+    color: var(--color-white);
+}
+
+a:not(:hover)   {
+    transition: linear .3s;
+}
+
+/* SCREEN SIZE CONDITIONS */
+
+@media only screen and (min-width: 1500px) {
+    .right  {
+        width: calc(100% - 600px);
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body    {
+        margin: 0;
+    }
+
+    .main    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+    }
+
+    .left   {
+        height: 450px;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .right  {
+        height: auto;
+        min-width:5%;
+        text-align: center;
+    }
+
+    .middle {
+        margin-bottom: 40px;
+    }
+
+    .bottom {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .sign   {
+        width: 100%;
+    }
+
+    button  {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    form    {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .sign   {
+        padding: 0;
+    }
+
+    .input  {
+        width: 100%;
+    }
+
+    input   {
+        width: 95%;
+    }
+
+
+}
