@@ -27,6 +27,7 @@ body    {
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0px 0px 20px var(--color-pink);
+    overflow-y:auto;
 }
 
 .left   {
